@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barisc\\Documents\\botTest\\Test\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\barisc\\Documents\\botTest\\DiscordBotLearning\\Test\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\barisc\\Documents\\botTest\\Test\\Test\\Test.csproj",
+      "projectPath": "C:\\Users\\barisc\\Documents\\botTest\\DiscordBotLearning\\Test\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\barisc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barisc\\Documents\\botTest\\Test\\Test\\obj\\",
+      "outputPath": "C:\\Users\\barisc\\Documents\\botTest\\DiscordBotLearning\\Test\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
