@@ -1,7 +1,9 @@
 ﻿using System.Linq;
+using Test.Discord;
 using Test.Storage;
 using Test.Storage.Implementations;
 using Unity;
+using Unity.Lifetime;
 using Unity.Resolution;
 
 namespace Test
@@ -23,12 +25,16 @@ namespace Test
         public static void RegisterTypes()
         {
             _container = new UnityContainer();
-            _container.RegisterType<IDataStorage, InMemoryStorage>();
+            _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<ILogger, Logger>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<Connection>(new ContainerControlledLifetimeManager());
+            //_container.RegisterSingleton<Logger>();
         }
 
-        public static T Resolve<T>()
+        internal static T Resolve<T>()
         {
-            return (T)Container.Resolve<T>(string.Empty, new ResolverOverride[2]);
+            return _container.Resolve<T>();
+            //return (T)Container.Resolve<T>(string.Empty, new ResolverOverride[2]);
         }
     }
 }

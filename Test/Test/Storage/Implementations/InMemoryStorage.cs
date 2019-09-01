@@ -5,11 +5,6 @@ namespace Test.Storage.Implementations
 {
     public class InMemoryStorage : IDataStorage
     {
-        public InMemoryStorage()
-        {
-            Console.WriteLine("In Memory Storage Constructor.");
-        }
-
         private readonly Dictionary<string, object> _dictionary = new Dictionary<string, object>();
 
         public void StoreObject(object obj, string key)

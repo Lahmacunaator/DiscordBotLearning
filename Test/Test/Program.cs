@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Discord.WebSocket;
+using Test.Discord;
+using Test.Discord.Entities;
 
 namespace Test
 {
@@ -7,8 +11,16 @@ namespace Test
         private static void Main()
         {
             Unity.RegisterTypes();
-
             Console.WriteLine("Hello World!");
+            var config = new BotConfig
+            {
+                Token = "ABC",
+                SocketConfig = SocketConfig.GetDefault()
+            };
+
+            var connection = Unity.Resolve<Connection>();
+
+
         }
     }
 }
